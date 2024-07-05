@@ -9,6 +9,7 @@
 
   define('INCLUDE_PATH', 'http://localhost/controle_estoque/');
   define('INCLUDE_PATH_PAINEL', INCLUDE_PATH.'painel/');
+  define('BASE_DIR_PAINEL', __DIR__.'/painel');
 
   define('HOST', 'localhost');
   define('USER', 'root');

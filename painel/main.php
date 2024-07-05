@@ -22,6 +22,8 @@
   <section class="container">
     <aside class="sidebar">
         <a href="<?php echo INCLUDE_PATH_PAINEL; ?>">Início</a>
+        <h2>Controle do Estoque</h2>
+        <a href="<?php echo INCLUDE_PATH_PAINEL; ?>cadastrar-produto">Cadastrar Produto</a>
     </aside>
     <div class="content">
       <?php
