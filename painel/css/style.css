@@ -200,3 +200,93 @@ form input[type="submit"]:hover {
   padding: 10px;
   margin-bottom: 10px;
 }
+
+.visualizar-produtos {
+  display: flex;
+  max-width: calc(100% - 300px);
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 80px;
+}
+
+.single-produto {
+  display: flex;
+  padding: 40px;
+  gap: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.quantidade-atual form {
+  padding: 0;
+}
+
+.info-single-produto p b {
+  color: #222;
+  font-size: 18px;
+}
+
+.info-single-produto p {
+  margin-bottom: 5px;
+  color: #555;
+  font-size: 18px;
+}
+
+.quantidade-atual form {
+  margin-top: 20px;
+  border-radius: 0;
+  padding: 10px 0;
+  border-bottom: 2px solid #aaa;
+}
+
+.quantidade-atual form label {
+  display: block;
+  color: #222;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.quantidade-atual form input {
+  height: 30px;
+  padding: 0 8px;
+  color: #222;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.quantidade-atual form input[type="submit"] {
+  display: block;
+  font-size: 16px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  color: #fff;
+}
+
+.btn-excluir {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.btn-editar {
+  background-color: #3377ff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.img-single-produto img {
+  max-width: 200px;
+}
