@@ -5,16 +5,23 @@
       <label for="search">Procure por um produto</label>
       <input type="text" name="search" id="search">
     </div>
-    <input type="submit" name="acao" value="Procurar">
+    <input type="submit" name="search_product" value="Procurar">
   </form>
 </section>
 
 <section class="visualizar-produtos">
   <?php
-    $produtos = MySql::connect()->prepare("SELECT * FROM `estoque`");
-    $produtos->execute();
-    $produtos = $produtos->fetchAll();
-
+    if (!isset($_POST['search_product'])) {
+      $produtos = MySql::connect()->prepare("SELECT * FROM `estoque`");
+      $produtos->execute();
+      $produtos = $produtos->fetchAll();
+    } else {
+      $search = $_POST['search'];
+      $produtos = MySql::connect()->prepare("SELECT * FROM `estoque` WHERE nome LIKE '%$search%' OR descricao LIKE '%$search%'");
+      $produtos->execute();
+      $produtos = $produtos->fetchAll();       
+    }
+    
     foreach ($produtos as $key => $value) {
   ?>
     <div class="single-produto">
