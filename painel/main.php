@@ -24,6 +24,7 @@
         <a href="<?php echo INCLUDE_PATH_PAINEL; ?>">Início</a>
         <h2>Controle do Estoque</h2>
         <a href="<?php echo INCLUDE_PATH_PAINEL; ?>cadastrar-produto">Cadastrar Produto</a>
+        <a href="<?php echo INCLUDE_PATH_PAINEL; ?>visualizar-produtos">Visualizar Produtos</a>
     </aside>
     <div class="content">
       <?php
