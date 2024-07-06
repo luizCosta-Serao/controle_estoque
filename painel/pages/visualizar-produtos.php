@@ -2,6 +2,22 @@
   $sql = MySql::connect()->prepare("SELECT * FROM `estoque`");
   $sql->execute();
   if ($sql->rowCount() >= 1) {
+
+  if (isset($_GET['deletar'])) {
+    $deleteId = $_GET['id'];
+    $imagens = MySql::connect()->prepare("SELECT * FROM `estoque_imagens` WHERE produto_id = $deleteId");
+    $imagens->execute();
+    $imagens = $imagens->fetchAll();
+    foreach ($imagens as $key => $value) {
+      @unlink(BASE_DIR_PAINEL.'/uploads/'.$value['imagem']);
+    }
+
+    $deleteEstoqueImagens = MySql::connect()->prepare("DELETE FROM `estoque_imagens` WHERE produto_id = $deleteId");
+    $deleteEstoqueImagens->execute();
+    $deleteEstoque = MySql::connect()->prepare("DELETE FROM `estoque` WHERE id = $deleteId");
+    $deleteEstoque->execute();
+    Painel::alert('sucesso', 'O produto foi deletado do estoque com sucesso');
+  }
 ?>
 <section>
   <h1 class="title">Produtos Cadastrados</h1>
@@ -61,7 +77,7 @@
             <input type="submit" name="atualizar" value="Atualizar">
           </form>
         </div>
-        <a class="btn-excluir" href="">Excluir</a>
+        <a class="btn-excluir" href="<?php echo INCLUDE_PATH_PAINEL; ?>visualizar-produtos?deletar&id=<?php echo $value['id']; ?>">Excluir</a>
         <a class="btn-editar" href="">Editar</a>
       </div>
       <div class="img-single-produto">
@@ -121,7 +137,7 @@
             <input type="submit" name="atualizar" value="Atualizar">
           </form>
         </div>
-        <a class="btn-excluir" href="">Excluir</a>
+        <a class="btn-excluir" href="<?php echo INCLUDE_PATH_PAINEL; ?>visualizar-produtos?deletar&id=<?php echo $value['id']; ?>">Excluir</a>
         <a class="btn-editar" href="">Editar</a>
       </div>
       <div class="img-single-produto">
