@@ -12,6 +12,8 @@
         echo '<p class="sucesso">'.$message.'</p>';
       } else if ($type === 'erro') {
         echo '<p class="erro">'.$message.'</p>';
+      } else if ($type === 'atencao') {
+        echo '<p class="atencao">'.$message.'</p>';
       }
     }
 
