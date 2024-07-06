@@ -6,6 +6,7 @@
 
 body {
   background-color: #ccc;
+  overflow-x: hidden;
 }
 
 /* Page Login */
@@ -201,6 +202,16 @@ form input[type="submit"]:hover {
   margin-bottom: 10px;
 }
 
+.atencao {
+  font-weight: 700;
+  border-radius: 10px;
+  background-color: #ff0;
+  color: #222 !important;
+  padding: 10px;
+  margin-bottom: 20px !important;
+  max-width: 400px;
+}
+
 .visualizar-produtos {
   display: flex;
   max-width: calc(100% - 300px);
@@ -289,4 +300,8 @@ form input[type="submit"]:hover {
 
 .img-single-produto img {
   max-width: 200px;
+}
+
+.produtos-esgotados .single-produto {
+  max-width: 800px;
 }
