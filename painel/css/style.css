@@ -305,3 +305,31 @@ form input[type="submit"]:hover {
 .produtos-esgotados .single-produto {
   max-width: 800px;
 }
+
+.imagens-produto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: calc(100% - 300px);
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.single-imagem-produto {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.single-imagem-produto img {
+  max-width: 200px;
+  height: 200px;
+  border-bottom: 1px solid #ccc;
+}
+
+.single-imagem-produto .btn-excluir {
+  max-width: 100px;
+  text-align: center;
+}
