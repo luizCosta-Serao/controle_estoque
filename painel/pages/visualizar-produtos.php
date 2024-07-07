@@ -78,7 +78,7 @@
           </form>
         </div>
         <a class="btn-excluir" href="<?php echo INCLUDE_PATH_PAINEL; ?>visualizar-produtos?deletar&id=<?php echo $value['id']; ?>">Excluir</a>
-        <a class="btn-editar" href="">Editar</a>
+        <a class="btn-editar" href="<?php echo INCLUDE_PATH_PAINEL; ?>editar-produto?id=<?php echo $value['id'] ?>">Editar</a>
       </div>
       <div class="img-single-produto">
         <?php
@@ -138,7 +138,7 @@
           </form>
         </div>
         <a class="btn-excluir" href="<?php echo INCLUDE_PATH_PAINEL; ?>visualizar-produtos?deletar&id=<?php echo $value['id']; ?>">Excluir</a>
-        <a class="btn-editar" href="">Editar</a>
+        <a class="btn-editar" href="<?php echo INCLUDE_PATH_PAINEL; ?>editar-produto?id=<?php echo $value['id'] ?>">Editar</a>
       </div>
       <div class="img-single-produto">
         <?php
